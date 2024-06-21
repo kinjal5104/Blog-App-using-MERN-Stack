@@ -1,0 +1,38 @@
+<section class="createPost_Section">
+    <div class="createPost_heading">
+
+        <a href="/admin/admin_dashboard" class="back-btn">&larr; Back</a>
+        <div class="createPost_toastMessage-div" >
+            <p>
+                <%= toastMessage%>
+            </p>
+        </div>
+    </div>
+
+    <div class="createPost_container">
+
+        <h3>Add new entry</h3>
+        <div class="addPost_container">
+            <form action="/admin/addPost" method="post" enctype="multipart/form-data" class="createPost_form">
+                <!-- <label for="title">Title</label>
+        <br> -->
+                <input type="text" placeholder="Title..." name="title" class="title_input">
+                <!-- <br> <br>
+        <label for="description" >Description</label>
+        <br> -->
+                <br>
+                <textarea rows="10" cols="50" placeholder="Description..." name="description"
+                    class="description_input"></textarea>
+                <br>
+                <label for="image">Image</label>
+
+                <input type="file" name="postImage">
+                <br>
+                <input type="submit" value="Add" class="add-btn">
+            </form>
+        </div>
+
+
+    </div>
+
+</section>

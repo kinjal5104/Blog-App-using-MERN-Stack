@@ -1,0 +1,38 @@
+<div class="admin_heading" >
+
+    <h2>Recent Posts</h2>
+    <a href="/admin/addPost"><button class="create_button">+ Create</button></a> 
+</div>
+<section class="posts_container">
+    
+    <% data.forEach(post =>{ %>
+
+        <a href="/admin/showPost/<%= post._id %>">
+            <div class="admin_posts" >
+                 <img src="/<%= post.postImage%>" class="card-img-top" alt="">
+                <div class="card-body">
+                    <h5 class="card-title"> <%=post.title%> </h5>
+                    
+                <div class="operators">
+
+                    <form action="/admin/editPost/<%= post._id %>" method="get">
+                        <input type="submit" value="Update" class="update_input" >
+                    </form>
+                    
+                        <form action="/admin/deletePost/<%= post._id %>?_method=delete" method="POST">
+                            <input type="submit" value="Delete" class="delete_input">
+                        </form>
+                </div>
+                    
+                </div>
+            </div>
+        </a>
+   
+    <% }) %>
+    
+
+</section>
+
+    <!-- <a href="/admin/updatePost"><button >Edit</button></a>
+    -->
+

@@ -1,0 +1,40 @@
+<section class="createPost_Section">
+
+<a href="/admin/admin_dashboard" class="back-btn">&larr; Back</a>
+
+<div class="createPost_container">
+
+<div class="editForm_heading">
+<h3>Edit post</h3>
+
+<form action="/admin/deletePost/<%= data._id %>?_method=delete" method="POST">
+    <input type="submit" value="Delete" class='delete_input'>
+</form>
+</div>
+<div class="editPost_container">
+    <form action="/admin/editPost/<%=data._id%>?_method=PUT" method="post"  class="createPost_form">
+
+        <label for="title">Title</label>
+        <br>
+        <input type="text"  name="title" value="<%=data.title%>" class="title_input" >
+        <br> <br>
+
+        <label for="description">Description</label>
+        <br>
+        <textarea rows="10" cols="50" name="description"  class="description_input">
+        <%=data.description%>
+        </textarea>
+        
+        <br> <br>
+
+        <label for="image">Image</label>
+        <br>
+        <input type="file" name="image" value="<%=data.image%>">
+        <br>
+
+        <input type="submit" value="Update"class=" add-btn">
+    </form>
+</div>
+</div>
+
+</section>

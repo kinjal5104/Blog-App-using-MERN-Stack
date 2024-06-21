@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploring Ramayana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <script src="index.js"></script>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+              <img src="logo-removebg-preview.png" class="logo">
+                <ul id="side-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Blogs</a></li>
+                    <li><a href="#contact">Timeline</a></li>
+                    <li><a href="#contact">Chatbot</a></li>
+                </ul>
+            </nav>
+           
+            
+            
+        </div>
+        
+        
+    </div>
+    <div class="title-container">
+        <p id="title" style="text-align: center;">Exploring Ramayana:<br> A Dynamic Blog Experience</p>
+    </div>
+ <script> 
+    const title = document.getElementById("title");
+
+const observeTarget = document.querySelector("#header");
+
+const observer = new IntersectionObserver(entries => {
+  const { isIntersecting } = entries[0];
+  if (isIntersecting) {
+    const speed = 0.5;
+    const y = window.pageYOffset;
+    title.style.transform = `translateY(${y * speed}px)`;
+  }
+});
+
+</script>  
+
+
+
+<div class="header-text">
+    <p id="quote-text">
+        <!-- Quote will be dynamically inserted here -->
+    </p>
+</div>
+    
+<script>
+    // Array of daily quotes
+    const dailyQuotes = [
+        "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston Churchill",
+        "अस्माकं तु वनं राजा दशरथो येन संवृतः। विश्रुतो धर्मपर्याये सत्यवादी धृतव्रतः।।6.18.28।। \n King Dasaratha, who observed truth and righteousness, and who was reputed for maintaining dharma, was the one who had sealed this forest for us.",
+        "सहायो न एव राज्याय विश्रुतः स एव हि मे। राक्षसेन्द्र वधे लङ्कामागमिष्यति मामकः।।3.22.52।।\n I, who am reputed, will not come to the kingdom along with the king. My son will indeed come to Lanka to kill the king of demons." ,
+        // Add more daily quotes here...
+    ];
+    
+    // Function to get a random quote from the array
+    function getRandomQuote(quotesArray) {
+        const randomIndex = Math.floor(Math.random() * quotesArray.length);
+        return quotesArray[randomIndex];
+    }
+    
+    // Function to display a new daily quote
+    function displayNewDailyQuote() {
+        const quoteTextElement = document.getElementById("quote-text");
+        const newQuote = getRandomQuote(dailyQuotes);
+        quoteTextElement.textContent = newQuote;
+    }
+    
+    // Display a new daily quote when the page loads
+    window.onload = displayNewDailyQuote;
+</script>
+
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="ram mandir.jpg" alt="work-1">
+                        <div class="layer">
+                            <h3>Ram Mandir</h3>
+                            <p>Many Hindus believe that it is located at the site of Ram Janmabhoomi, the mythical birthplace of Rama, a principal deity of Hinduism. The temple was inaugurated on 22 January 2024 after a prana pratishtha
+                            </p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                            <!-- Use "fas fa-arrow-up-right" for Font Awesome icons -->
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="work-2.png" alt="work-2">
+                        <div class="layer">
+                            <h3>Blogs</h3>
+                            <p>Blogs
+                            </p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="work-3.png" alt="work-3">
+                        <div class="layer">
+                            <h3>Time-Line</h3>
+                            <p>Time-Line
+                            </p>
+                            <a href="#"><i class="fa-solid fa-up-right-from-square"></i></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+</body>
+</html>

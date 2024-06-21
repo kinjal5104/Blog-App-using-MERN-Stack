@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        
+
+        html {
+            scroll-behavior: smooth;
+        }
+        .body{
+            width: 100%;
+            height: 100%;
+        }
+        
+        
+        .navbar{
+            background: linear-gradient(to right, #ffc300, #ff7b00);
+            z-index: 11;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+       
+            height: 9%;
+            position:fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: 0 1rem;
+        
+        }
+        
+        .title{
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            font-size: 2rem;
+            text-decoration: none;
+            color: black;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            transition: all ease 0.3s;
+            text-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+        color: #000000;
+        }
+        .title:hover{
+            text-decoration: none;
+            letter-spacing: 0.3rem;
+            color: black;
+            scale: 1.02;
+        
+        }
+        
+        nav ul li{
+            display: inline;
+            list-style: none;
+            margin: 0px 20px;
+            margin-right: 10px;
+            padding: 0.2rem;
+           
+        }
+        
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            position: relative;
+        }
+        nav ul li a:hover{
+            color: #000000;
+            /* background-color: aliceblue; */
+            text-decoration: none;
+            
+        }
+        
+        
+        nav ul li a::after{
+            content: '';
+            width: 0%;
+            height: 3px;
+            background: black;
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            transition: 0.5s;
+        }
+        
+        nav ul li a:hover::after{
+            width: 100%;
+          
+                
+            
+            
+        }
+        
+        .logo{
+            position: relative;
+            margin-left: 2rem;
+            width: 6%;
+            height: 100%;
+            /* padding-left: 2rem; */
+        }
+        
+        .logo:hover{
+            cursor: pointer;
+        }
+        
+        .header-text {
+            padding-top: 250px;
+            padding-left: 52%;
+            font-size: 45px;
+            /* background-image: linear-gradient(to right, #f7b267, #f25c54); */
+        
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* navbar ends */
+        
+        
+        /* home page title */
+        
+        
+        .homePage{
+            /* position: relative;
+            width: 100%;
+            height: 100vh; */
+        
+        /* new css */
+            
+        /* position: fixed; */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url("static/bgimg2_1_1024x499.jpeg"); /* Replace 'your-image-url.jpg' with the URL of your background image */
+        background-size:cover;
+        background-clip: content-box;
+        backface-visibility: visible;
+        background-position-y: bottom;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        z-index: -1; 
+        
+            
+        }
+        
+        .website_title_container{
+
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        
+            /* height: 6rem; */
+            position: relative;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        .website_title{
+            color: #fffffff1;
+             font-size: 3rem;
+           font-weight: 500;
+             /*font-family: 'Copperplate, Papyrus, fantasy';
+            width: 100%;
+            height: 100%;
+            position: relative;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%); */
+        
+        
+            /* new css */
+            text-align: center;
+            width: 40%;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+        }
+        .website_title_container p{
+            font-weight: 600;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .website_title_container img{
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+        /* homepage title ends */
+        
+        
+        /* sholks start */
+        
+        #quote-container {
+            /* max-width: 600px; */
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        
+        
+        /* .shloks{
+            position: relative;
+            width: 100%;
+            height: max-content;
+            padding: 2rem 0;
+            background-color: #fff;
+        } */
+        
+        .sholk_container{
+            background-color: #fff;
+            position: relative;
+            width: 100%;
+            height: max-content;
+            margin: auto;
+        }
+        
+        .shlok_heading{
+            text-align: center;
+            color: #F26D21
+        }
+        
+        /* sholk ends */
+        
+        
+        /* highlights start */
+        
+        /* card hightlights starts */
+        .highlights{
+            width: 100%;
+            z-index: 3;
+            background-color:#fff;
+        }
+        .cardContainer{
+            perspective: 1000px;
+            justify-content: center;
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr;
+                column-gap: 3rem;
+            width: 90%;
+            margin: auto;
+            padding-bottom: 4rem;
+        }
+        
+        .highlights_title{
+            padding: 2rem 0;
+            text-align: center;
+            color: #F26D21
+        }
+        
+        .highlights_cards{
+            width: 15rem;
+            
+        }
+        
+        .highlights_links{
+            text-decoration: none;
+            position: relative;
+            width: 20rem;
+            margin: auto;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        .left_card,.right_card{
+            transition: all ease 0.5s;
+        }
+        .left_card:hover{
+            text-decoration: none;
+            transform: rotateY(45deg);
+        
+        }
+        .right_card:hover{
+            transform: rotateY(-45deg);
+        
+        }
+        .total_card{
+            transform-origin: right center;
+            /* transform: rotateY(45deg); */
+            position: relative;
+            box-shadow: 0px 0px 19px 8px rgba(0, 0, 0, 0.2);
+            height: 21rem;
+            width: 100%;
+            /* height: 17rem; */
+            /* overflow: hidden; */
+            /* top: 0; */
+            /* z-index: 1; */
+            transition: all ease 2s;
+            /* margin: auto; */
+            
+        }
+        
+        
+        .card-img-top{
+            
+            position: relative;
+            margin: auto;
+            display: block;
+            height: 100%;
+            z-index: 1; 
+            transition: all ease 2s;
+            width: 100%;
+            justify-self: center;
+        }
+        
+        .card_body{
+            
+            margin: auto;
+            z-index: 2;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            /* top: 100%; */
+            overflow: hidden;
+            width: 17rem;
+            height: 0;
+            transition: all ease .5s;
+            
+        }
+        .total_card:hover .card_body{
+            padding: 2.5rem 1rem;
+            z-index: 1;
+            height: 100%;
+            text-decoration: none;
+            width: 100%;
+            bottom: 100%;
+            background-color: rgba(0,0,0,0.3);
+            color: #fff;
+            
+        }
+        .total_card:hover a{
+            text-decoration: none;
+        }
+        .card_heading{
+            text-decoration: none;
+            text-align: center;
+        }
+        
+        /* card highlights ends */
+        
+        /* slider starts */
+        
+        .carousel-item{
+            position: relative;
+            
+        }
+        
+        .festivals{
+            width: 100%;
+            background-color: #fff;
+        }
+        
+        .festival_heading{
+            color: #F26D21;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .festival_readMore{
+            padding: 0.2rem;
+            background-color: #fff;
+            text-decoration: none;
+            color: black;
+            border-radius: 5px;
+        }
+        .carouselExampleIndicators{
+            width: 90%;
+            margin: auto;
+            z-index: 6;
+        }
+        .festival_container{
+            width: 90%;
+            margin: auto;
+            padding-bottom: 2rem;
+            
+        
+        }
+        .carouselExampleIndicators{
+            width: 100%;
+            border: 2px solid darkgoldenrod;
+        }
+        
+        
+        .image_container{
+            box-shadow: 0px 19px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid darkgoldenrod;
+            height: 70vh;
+            /* height: max-content; */
+        }
+        .slider_img{
+            height: 100%;
+        }
+        .carousel-inner{
+            box-shadow: 0px 19px 20px rgba(0, 0, 0, 0.2);
+        
+        }
+        
+        .carousel-caption{
+            z-index: 5;
+        }
+        
+        /* slider ends */
+        
+        
+        
+        /* hightlights ends */
+        
+        /* about starts */
+        
+        .about{
+            width:100%;
+            height: max-content;
+            background-color: #eddcaf;
+        }
+        
+        .about_container{
+            position: relative;
+            width: 90%;
+            margin: auto;
+        }
+        .about_heading{
+            color: #F26D21;
+            padding-top: 2rem;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            
+            
+        }
+        
+        .about_heading h2{
+            
+            font-size: 2.5rem;
+        }
+        .college_heading,
+        .department_heading{
+            width: fit-content;
+            padding: 0.8rem 0.8rem;
+            border-top-right-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+            background-color: #e4a932;
+            margin-top: 2rem;
+        
+        }
+        .college_details,
+        .department_details{
+            text-align: justify; 
+            margin-top: 1rem;   
+        }
+        
+        
+        
+        /* about ends */
+        
+        
+        
+        /* footer starts */
+        
+        footer{
+            padding-top: 1.5rem;
+            width: 100%;
+            background-color:#eddcaf ;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .footer_container{
+            box-shadow: 0px -2px 8px rgba(0,0,0,0.7);
+            /* border-top-right-radius: 4rem;
+            border-top-left-radius: 4rem; */
+            padding-top: 2rem;
+            width: 100%;
+            text-align: center;
+            background-color: #f3c15e;
+            background-color: linear ;
+        }
+        
+        .footer_college h4{
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer_college h5{
+            padding-top: 1rem;
+        }
+        
+        .developers_details h4{
+            padding-top: 1rem;
+            font-size: 1.5rem;
+        }
+        .developers_details h3{
+            font-size: 1.2rem;
+        }
+        .names{
+            justify-content:space-evenly;
+            width: 70%;
+            margin: auto;
+            display: flex;
+        }
+        
+        .individual_name img{
+            position: relative;
+            width: 25%;
+            height: 25%;
+            transition: all ease 0.2s;
+        }
+        
+        .individual_name img:hover{
+            transform: translateY(-7px);
+        }
+        /* footer ends */
+        
+        
+        
+        
+        @media  screen and (min-width:720px)and (max-width:900px){
+            .highlights_links{
+                width: 12rem;
+                height: 14rem;
+            }
+            .total_card{
+                height: 100%;
+            }
+        }
+        @media  screen and (min-width:901px)and (max-width:1070px){
+            .highlights_links{
+                width: 16rem;
+                height: 16rem;
+            }
+            .total_card{
+                height: 100%;
+            }
+        }
+        
+        
+        @media  screen and (min-width:586px)and (max-width:720px){
+            .cardContainer{
+                grid-template-columns: 1fr;
+                row-gap: 1rem;
+            }
+            .highlights_links{
+                width: 18rem;
+                height: 16rem;
+            }
+            .total_card{
+                height: 100%;
+            }
+        }
+        
+        @media  screen and (max-width:587px){
+            .highlights_links{
+                width: 12rem;
+                height: 14rem;
+            }
+            .cardContainer{
+                grid-template-columns: 1fr;
+                row-gap: 1.2rem;
+            }
+            .total_card{
+                height: 100%;
+            }
+        }
+        
+        @media  screen and (max-width:587px){
+            .navbar{
+                height: max-content;
+            }
+            .title{
+                font-size: 1.4rem;
+            }
+            .developers_details h4{
+                font-size: 1rem;
+            }
+            .developers_details h5{
+                font-size: 0.7rem;
+            }
+        }
+.chat-container {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    z-index: 999;
+    max-width: 500px;
+    border: 5px solid #000b0b;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.chat-box {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+.chat-bot, .user {
+    margin: 10px 0;
+}
+
+.chat-bot p {
+    background-color:#ff8f05 ;
+    border: 2px solid #ffca7b ;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 80%;
+}
+
+.user p{
+    background-color:#ffca7b ;
+    border: 2px solid #ff8f05 ;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 80%;
+}
+.user {
+    text-align: right;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    
+    border-radius: 5px;
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+
+#toggle-chat {
+position: fixed;
+bottom: 20px; /* Adjust as needed */
+right: 20px; /* Adjust as needed */
+z-index: 9999; /* Ensure it's on top of other content */
+cursor: pointer; /* Change cursor to pointer */
+}
+        </style>
+</head>
+<body>
+
+<!-- nav bar  -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar_" style="position: fixed; width: 100vw;" >
+    <img src="static/finalLogo.png" alt='...'class="logo">
+   <a href="#homePage" class="title">Exploring Ramayana</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="navbar-toggler-icon"></span>
+   </button>
+ 
+   <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+     <ul class="navbar-nav mr-auto">
+       <li class="nav-item active">
+         <a class="nav-link" href="#highlights">Highlights <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item active">
+         <a class="nav-link" href="#about">About <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item active">
+         <a class="nav-link" href="http://localhost:8000/repository">Library <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item active">
+         <a class="nav-link" href="http://localhost:5173">Blogs <span class="sr-only">(current)</span></a>
+       </li>
+       <li class="nav-item active ">
+         <a class="nav-link chatbot-link" href="#chat-container">Chatbot <span class="sr-only">(current)</span></a>
+       </li>
+       
+     </ul>
+   </div>
+ </nav>
+
+ 
+
+<!-- home page -->
+
+<div class="homePage" id="homePage">
+
+    <h1 class="website_title">
+        <b>Exploring Ramayana Dynamic Blog Experience</b>
+    </h1>
+
+</div>       
+
+
+<!-- sholk container -->
+
+<div class="sholk_container">
+  <div class="shlok_heading">
+      <h2><b>Shloks</b></h2>
+    </div>
+    <div id="quote-container">
+      <p id="quote-text"></p>
+  </div>
+</div>
+
+
+<!-- highlights -->
+<section class="highlights" id="highlights">
+
+  
+  <h2 class="highlights_title"><b>Highlights of this websites</b></h2>
+  <div class="cardContainer">
+
+    <a href="http://localhost:5173" class="highlights_links left_card">
+    <div class="total_card ">
+        <img src="https://kidslearntoblog.com/wp-content/uploads/2009/06/blog.jpg" class="card-img-top" alt="..." >
+        <div class="card_body">
+            <h4 class="card_heading">Blogs</h4>
+            <p class="card_text">Explore our dynamic blog, brimming with diverse content, ranging from thought-provoking articles to actionable insights, catering to a wide spectrum of interests and expertise.</p>
+        </div>
+    </div> 
+  </a>
+    
+    <a href="http://localhost:8000/repository" class="highlights_links middle_card">
+    <div class="total_card">
+      <!-- <div class="cards" style="width: 18rem;"> -->
+        <img src="https://i.pinimg.com/564x/a6/8d/74/a68d74fac25547fbeef599ea9e2e4441.jpg" class="card-img-top" alt="..." >
+      
+        <div class="card_body">
+            <h4 class="card_heading">Knowledge Repository</h4>
+            <p class="card_text">Dive into our extensive knowledge repository, meticulously curated with a plethora of resources, guides, and reference materials, serving as a go-to destination for in-depth information and expertise on various subjects</p>
+        </div>
+      <!-- </div> -->
+    </div> 
+  </a>
+    
+    <a href="#chat-container" class="highlights_links right_card chatbot-link chatbot-icon">
+    <div class="total_card">
+      <!-- <div class="cards" style="width: 18rem;"> -->
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSImm8RZV5f0YVTwqFyrs55qjmCbopefrnUja1KNW1TRg&s" class="card-img-top" alt="..." >
+      
+        <div class="card_body">
+            <h4 class="card_heading">Chatbot</h4>
+            <p class="card_text">Experience seamless interaction with our intelligent chatbot, designed to provide instant assistance, answer queries, and engage in meaningful conversations, enhancing user engagement and satisfaction throughout your browsing journey.</p>
+        </div>
+      <!-- </div> -->
+    </div>
+  </a> 
+    
+  </div>
+</section>
+
+<!-- monuments -->
+<section class="festivals" id="monumental_highlights">
+  <div class="festival_container">
+    <h2 class="festival_heading"><b>Monumental Collections</b></h2>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active" style="z-index: 5;">
+          <div class="image_container">
+            <img class="d-block w-100 slider_img" src="https://images.deccanherald.com/deccanherald%2Fimport%2Fsites%2Fdh%2Ffiles%2Fgallery_images%2F2021%2F10%2F20%2FJatayu%20Park_4.jpg?w=1200" alt="First slide">
+          </div>
+          <div class="carousel-caption d-none d-md-block" >
+            <h5>Jatayu Earth's Center Nature Park</h5>
+            <p>Jatayu Nature Park or Jatayu Rock, is a park and tourism centre at Chadayamangalam in Kollam district of Kerala, India. It stands at an altitude of 350m (1200ft) above the mean sea level. Jatayu Nature Park holds the distinction of having the world’s largest bird sculpture, which is of Jatayu. <a href="https://en.wikipedia.org/wiki/Jatayu_Earth's_Center_Nature_Park" target="_blank" class="festival_readMore"> Read More</a></p>
+          </div>
+        </div>
+
+        <div class="carousel-item" style="z-index: 5;">
+          <div class="image_container">
+            <img class="d-block w-100 slider_img" src="https://c.ndtvimg.com/2024-01/cttj2n2_ram-temple-mandir_625x300_22_January_24.jpeg" alt="Second slide">
+          </div>
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Ram Mandir</h5>
+            <p>Rama is a Hindu deity who is considered by Hindus to be a Pūrṇāvatāra and some Hindus view Rama as Para Brahman. Rama holds huge significance in Hindu culture and religion. In the Rama avatar, Vishnu is not supposed to exhibit any of his divine potencies and lead life as a human.  <a href="https://en.wikipedia.org/wiki/Ram_Mandir" target="_blank" class="festival_readMore"> Read More</a></p>
+          </div>
+        </div>
+
+        <div class="carousel-item" style="z-index: 5;">
+          <div class="image_container">
+            <img class="d-block w-100 slider_img" src="https://imgk.timesnownews.com/story/ramsetupti.jpg?tr=w-1200,h-900" alt="Third slide">
+          </div>
+          <div class="carousel-caption d-none d-md-block" >
+            <h5>Ram Setu</h5>
+            <p>Rama Setu is a chain of natural limestone shoals between Pamban Island, known as Rameswaram Island, off the south-eastern coast of Tamil Nadu, India, and Mannar Island, off the north-western coast of Sri Lanka. Geological evidence suggests that the bridge was formerly a land connection between India and Sri Lanka  <a href="https://en.wikipedia.org/wiki/Adam%27s_Bridge" target="_blank" class="festival_readMore"> Read More</a></p>
+          </div>
+        </div>
+
+        <div class="carousel-item" style="z-index: 5;">
+          <div class="image_container">
+            <img class="d-block w-100 slider_img" src="https://hampi.in/wp-content/uploads/2010/09/FP-Sugreevas-Cave1.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-caption d-none d-md-block" >
+            <h5>Sugreevas Cave</h5>
+            <p>Sugreeva's Cave was once the abode of the mythical monkey warrior Sugreeva, a great devotee of Lord Rama. It is a natural cave. The curiosity to see the home of the mythical monkey brings thousands of tourists to this cave every year. The place is very peaceful and offers panoramic views of the surroundings.  <a href="https://hampi.in/sugreevas-cave" target="_blank" class="festival_readMore"> Read More</a></p>
+          </div>
+        </div>
+
+
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- about -->
+
+<section class="about" id="about">
+  <div class="about_container">
+    <div class="about_heading">
+      <h2><b>About Us</b></h2>
+    </div>
+    <div class="about_college">
+      <div class="college_heading">
+        <h4>K J Somaiya Institute of Technology</h4>
+      </div>
+      <div class="college_details">
+        This second Engineering College established by the Somaiya Trust in the year 2001, at Ayurvihar campus, Sion, was initiated with a first batch of 180 undergraduate students and three branches in Engineering—namely Electronics and Telecommunication Engineering, Computer Engineering, and Information Technology.
+
+        Subsequently, The Electronics Department was founded in the year 2004 and since then the Institute has strived towards providing the necessary dynamism to all its stakeholders in the light of expanding knowledge and changing socio-economic requirements of the modern society.
+
+        KJSIT is recognized by the All India Council for Technical Education (AICTE) & the Govt. of Maharashtra with a permanent affiliation to the University of Mumbai (UOM). It is accredited with “A” Grade and 3.21 CGPA in its 1 st cycle for 5 years duration by National Assessment and Accreditation Council (NAAC) and it’s three programs - Computer Engineering, Electronics and Telecommunication Engineering and Electronics Engineering - are accredited by National Board of Accreditation. KJSIT is bestowed upon the “BEST COLLEGE AWARD” by the University of Mumbai in urban region and “Best Engineering College Award" by CSI local chapter and also from ISTE Maharashtra and Goa Section.
+
+        Moreover, KJSIT has introduced a Post Graduate engineering program in Artificial Intelligence from the Academic Year 2019-20.
+
+        Additionally, an undergraduate engineering program - Artificial Intelligence and Data Science - has been offered by KJSIT from the academic year 2020-21 with the intake capacity of 60 seats leading the total intake increased to 360. KJSIT is constantly identifying and developing latest and nascent technologies such as Artificial Intelligence, Machine Learning, Deep Learning and Block Chain Technology, etc. for enhancing student learning and growth.
+
+        University Grants Commission has conferred Autonomous Status to, K J Somaiya Institute of Technology, for a period of 10 years from the A.Y. 2021- 22 to A.Y. 2030-31 as per the provisions of Clause 3.13 and Clause 6.4 (i) of UGC Regulations dated 12.02.2018, whereby the Degree will be awarded by the University of Mumbai.
+      </div>
+    </div>
+
+   
+    <div class="about_department">
+      <div class="department_heading">
+        <h4>Computer Engineering</h4>
+      </div>
+      <div class="college_details">
+        The Computer Engineering department was established in the year 2001 to impart quality education. The department has well qualified and motivated faculty members and support staff. The laboratories are adequately equipped with state-of-the-art facilities. The students are members of various professional bodies like IET, CSI, IEEE, NSS etc. Various platforms are available for students, like project competition, technical & cultural festivals, international conference, etc. to showcase their talent. It is a regular practice of the department to organize industrial visits, expert talks, workshops and internship in addition to the latest certification courses for students in the field of Computer engineering. Student have won prizes in various national and international level paper presentation, competitions, project exhibition etc. As the department has good industry interaction and alumni support, students get several opportunities of internship, project guidance, placement and many more.
+        The department is accredited by NBA in 2018 and intake has doubled to 120 from academic year 2019-20. Besides offering undergraduate (B. Tech. in Computer Engineering) it also offers Post Graduation (M.Tech.) in Artificial Intelligence. As the autonomous status is awarded by UGC from academic year 2021-22, curricula have revised for UG and PG programs by Board of Studies. Exposure courses like Skill based, Activity based and Technology based courses are added to motivate students to participate in various activities. Under Project Based Learning (PBL) mini, minor and major projects are introduced from sem III to Sem VIII which help students to work in a team and develop projects using latest technologies.
+        The department has to its credits of maximum number of placements of the students in Infosys, TCS, Accenture, Cognizant, L&T Infotech, CSC, Tech Mahindra, Mastek, ICON, Majesco, MuSigma, BNP Paribas. Every year, few students opt for pursuing higher studies at prestigious universities in India and abroad.
+      </div>
+    </div>
+
+  </div>
+</section>
+<div class="chat-container" id="chat-container">
+    <div class="chat-box" id="chat-box">
+        <div class="chat-bot">
+            <p>Jai Shree Ram! How can I assist you today?</p>
+        </div>
+    </div>
+    <input type="text" id="user-input" placeholder="Type your message...">
+    <button onclick="sendUserMessage()">Send</button>
+</div>
+
+<!-- footer -->
+<footer>
+  <div class="footer_container">
+    <div class="footer_college">
+      <h4>K J Somaiya Institute of Technology</h4>
+      <h5>Computer Engineering Department</h5>
+      <h6>2023-24</h6>
+    </div>
+    <div class="developers_details">
+
+      <h4><b>Guided By:</b></h4>
+      <h3>Prof Pradnya Patil</h3>
+
+      <h4><b>Developed By:</b></h4>
+      <div class="names">
+        <div class="individual_name">
+          <h5>Kinjal Patel</h5>
+          <a href="https://www.linkedin.com/in/kinjal-patel-bb441a279/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png" alt="" class="linkedIn">
+        </a>
+        </div>
+        <div class="individual_name">
+          <h5>Saniya Patil</h5>
+          <a href="https://www.linkedin.com/in/saniya-patil-847b70287/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png" alt="" class="linkedIn"></a>
+        </div>
+        <div class="individual_name">
+          <h5>Mohit Patel</h5>
+          <a href="https://www.linkedin.com/in/mohit-patel-5135552a3/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png" alt="" class="linkedIn">
+        </a>
+        </div>
+        <div class="individual_name">
+          <h5>Yash Ranbhare</h5>
+          <a href="https://www.linkedin.com/in/yash-ranbhare-a3909724b/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png" alt="" class="linkedIn">
+        </a>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+
+ <img src="data:image/png;base64,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" height="40px" width="40px" style="margin-bottom: 20ox; margin-right: 20px; margin-top: 660px; margin-left: 1460px;" id="toggle-chat" onclick="toggleChat()">
+    
+
+    <div class="chat-container" id="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="chat-bot">
+                <p>Jai Shree Ram! How can I assist you today?</p>
+            </div>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendUserMessage()">Send</button>
+    </div>
+
+
+<script>
+     // Array of quotes, add as many as you like
+ const quotes = [
+    "अस्माकं तु वनं राजा दशरथो येन संवृतः। विश्रुतो धर्मपर्याये सत्यवादी धृतव्रतः।।6.18.28।।\n  King Dasaratha, who observed truth and righteousness, and who was reputed for maintaining dharma, was the one who had sealed this forest for us.",
+    "सहायो न एव राज्याय विश्रुतः स एव हि मे। राक्षसेन्द्र वधे लङ्कामागमिष्यति मामकः।।3.22.52।।\n I, who am reputed, will not come to the kingdom along with the king. My son will indeed come to Lanka to kill the king of demons." ,
+    "श्रीराम राम रामेति रमे रामे मनोरमे। सहस्रनाम तत्तुल्यं रामनाम वरानने॥\n This shloka extols the power and sweetness of the name of Lord Rama. It emphasizes the significance of chanting the name of Rama, which is believed to purify the mind and soul.",
+    "धर्मे चार्थे च कामे च मोक्षे च भरतर्षभ। यदि यत्प्रीयते देव तत्तदेव करोम्यहम्॥\n Spoken by Lord Rama, this shloka reflects his commitment to righteousness and duty. It signifies the importance of fulfilling one's responsibilities while adhering to dharma (righteousness) and striving for the greater good.",
+    "कर्मण्येवाधिकारस्ते मा फलेषु कदाचन। मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥\n This shloka emphasizes the importance of performing one's duties without being attached to the outcomes. It highlights the concept of Nishkama Karma, or selfless action, which is central to many Hindu philosophical teachings.",
+    "कौसल्यासुप्रजा राम पूर्वा संध्या प्रवर्तते। उत्तिष्ठ नरशार्दूल कर्तव्यं दैवमाह्निकम्।। \n O Rama, the son of Kausalya, the first part of Sandhya (dawn) is commencing. O best of men, arise, it is time to perform your duties towards the gods.",
+    "धर्मेण हिन्सा तथा नियमेन नियमेन युक्ता धर्मे न विरुधानि।कामेन विरुधां यस्य नास्ति कामः स धर्मं अप्नोति विरुधां न कामः।। \n In a person who is endowed with righteousness and who acts according to the rules of righteousness, there can never be anything that contradicts righteousness. One who has no desire that conflicts with righteousness, he alone attains righteousness, and not one who has a desire that conflicts with righteousness.",
+    "मनोजवं मारुततुल्यवेगं जितेन्द्रियं बुद्धिमतां वरिष्ठम्। वातात्मजं वानरयूथमुख्यं श्रीरामदूतं शरणं प्रपद्ये।। \n I take refuge in Sri Rama's messenger, Hanuman, who is swift as the mind and fast as the wind, who has controlled his senses and is the most intelligent among the intelligent ones; who is the son of Vayu and the chief among the Vanaras. Let me find shelter in him.",
+];
+
+// Function to get a random quote from the array
+function getRandomQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    return quotes[randomIndex];
+}
+
+// Function to display a new quote
+function displayNewQuote() {
+    const quoteTextElement = document.getElementById("quote-text");
+    const newQuote = getRandomQuote();
+    quoteTextElement.innerHTML = newQuote;
+}
+
+displayNewQuote();
+
+window.addEventListener('scroll', function() {
+    var title = document.querySelector('.website_title');
+    var scrollPosition = window.scrollY;
+
+    // Adjust the position of the title based on the scroll position
+    title.style.top = 50 - scrollPosition * 0.1 + '%';
+});
+
+var chatContainer = document.getElementById("chat-container");
+
+function toggleChat() {
+    chatContainer.style.display = chatContainer.style.display === "block" ? "none" : "block";
+}
+
+// Function to send user message when Enter key is pressed
+function handleKeyPress(event) {
+    if (event.key === 'Enter') {
+        sendUserMessage();
+    }
+}
+
+// Attach handleKeyPress function to input field
+document.getElementById("user-input").addEventListener("keypress", handleKeyPress);
+
+// Function to send user message
+function sendUserMessage() {
+    var userInput = document.getElementById("user-input").value;
+    if (userInput !== "") {
+        appendUserMessage(userInput);
+        getUserResponse(userInput);
+        document.getElementById("user-input").value = "";
+    }
+}
+
+// Function to append user message to chat box
+function appendUserMessage(message) {
+    var chatBox = document.getElementById("chat-box");
+    var userDiv = document.createElement("div");
+    userDiv.classList.add("user");
+    var userMessage = document.createElement("p");
+    userMessage.textContent = message;
+    userDiv.appendChild(userMessage);
+    chatBox.appendChild(userDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Function to append bot message to chat box
+function appendBotMessage(message) {
+    var chatBox = document.getElementById("chat-box");
+    var botDiv = document.createElement("div");
+    botDiv.classList.add("chat-bot");
+    var botMessage = document.createElement("p");
+    botMessage.textContent = message;
+    botDiv.appendChild(botMessage);
+    chatBox.appendChild(botDiv);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+// Function to get bot response
+function getUserResponse(userInput) {
+    // Dummy fetch function, replace it with your actual fetch request
+    fetch("/get?msg=" + userInput)
+    .then(response => response.text())
+    .then(data => {
+        appendBotMessage(data);
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const chatbotLink = document.querySelector('.chatbot-link');
+    const chatbotIcon = document.querySelector('.chatbot-icon');
+
+    chatbotLink.addEventListener('click', function () {
+        toggleChat();
+});
+});
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
